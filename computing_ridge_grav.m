@@ -1,4 +1,4 @@
-function [gr] = computing_ridge_grav(D1,D2,lambda_f1,lambda_f2)
+function [X,gr] = computing_ridge_grav(D1,D2,rho_s)
 
 
 n = 512; % grid refinement
@@ -14,7 +14,6 @@ g = 9.82; % gravitational acceleration (m s^-2)
 G = 6.5e11; % gravitational constant, (m^3 kg^-1 s^-2)
 d = 6*1000;
 rho_w = 1025;
-rho_s = 2300;
 rho_c = 2800;
 rho_m = 3330;
 s = 6.2*1000;
@@ -50,7 +49,7 @@ shading flat
 xlabel('x','Interpreter','latex','FontSize',18)
 ylabel('y','Interpreter','latex','FontSize',18)
 zlabel('z','Interpreter','latex','FontSize',18)
-title(['Gravity anomaly, $D_1 =$ ' num2str(D1) ', $D_2 =$ ' num2str(D2) ', $\lambda_{f1} =$ ' num2str(lambda_f1) ', $\lambda_{f2} =$ ' num2str(lambda_f2)],'Interpreter','latex','FontSize',18)
+title(['Gravity anomaly, $D_1 =$ ' num2str(D1) ', $D_2 =$ ' num2str(D2)],'Interpreter','latex','FontSize',18)
 colormap default
 
 end

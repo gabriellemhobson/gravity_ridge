@@ -11,7 +11,7 @@ kx = (-n/2:n/2-1)/Lx;
 
 sigma = 10*1000; % m
 g = 9.82; % gravitational acceleration (m s^-2)
-G = 6.5e11; % gravitational constant, (m^3 kg^-1 s^-2)
+G = 6.67e-11; % gravitational constant, (m^3 kg^-1 s^-2)
 d = 6*1000;
 rho_w = 1025;
 rho_c = 2800;
@@ -46,9 +46,9 @@ gr = ifftshift(ifft2(fftshift(GR)));
 figure
 surf(X,Y,gr)
 shading flat
-xlabel('x','Interpreter','latex','FontSize',18)
-ylabel('y','Interpreter','latex','FontSize',18)
-zlabel('z','Interpreter','latex','FontSize',18)
+xlabel('$x$','Interpreter','latex','FontSize',18)
+ylabel('$y$','Interpreter','latex','FontSize',18)
+zlabel('$g(\mathbf{x}) \ (m/s^2)$','Interpreter','latex','FontSize',18)
 title(['Gravity anomaly, $D_1 =$ ' num2str(D1) ', $D_2 =$ ' num2str(D2)],'Interpreter','latex','FontSize',18)
 colormap default
 
